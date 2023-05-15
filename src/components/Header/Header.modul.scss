@@ -1,0 +1,87 @@
+.header{
+    position: fixed;
+    z-index: 1;
+    background-color: #1c1c1c;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    .rect{
+        position: absolute;
+        left: 47%;
+        width: 85px;
+        top: 0px;
+    }
+    .logo{
+        border: 2px solid #ccc;
+        border-style: dashed;
+        margin-left: 240px;
+        width: 90px;
+        height: 80%;
+        .Boost{
+            position: absolute;
+            width: 90px;
+            height: 168px;
+            left: 250px;
+            top: -40px;
+
+            font-family: 'Amiri Quran', serif;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 40px;
+            line-height: 140.6%;
+
+            letter-spacing: -0.115em;
+
+            color: #FFFFFF;
+        }
+        .Center{
+            position: absolute;
+            width: 104px;
+            height: 56px;
+            left: 240px;
+            top: 0px;
+
+            font-family: 'Kantumruy', serif;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 40px;
+            line-height: 140.6%;
+
+            letter-spacing: -0.115em;
+
+            color: #FFFFFF;
+        }
+    }
+    .links{
+        display: flex;
+        width: 550px;
+        list-style: none;
+        color: #fff;
+        margin-left: 250px;
+        li{
+            margin-right: 40px;
+        }
+    }
+    .makeOrder{
+        cursor: pointer;
+        box-sizing: border-box;
+        margin-top: 20px;
+        text-align: center;
+        padding-top: 14px;
+        width: 183px;
+        height: 56px;
+        top: 50px;
+        color: #fff;
+        text-decoration: none;
+        font-family: 'Fahkwang', sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 26px;
+
+        background: rgba(46, 236, 197, 0.1);
+        border: 1.5px solid #2EECC5;
+        border-radius: 49px;
+    }
+}

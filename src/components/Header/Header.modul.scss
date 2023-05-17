@@ -1,5 +1,6 @@
 .header{
     position: fixed;
+    top: 0;
     z-index: 1;
     background-color: #1c1c1c;
     width: 100%;
@@ -24,9 +25,10 @@
             width: 90px;
             height: 168px;
             left: 250px;
-            top: -40px;
+            top: -27px;
+            margin-left: 10px;
 
-            font-family: 'Amiri Quran', serif;
+            font-family: 'Amiri Quran', sans-serif;
             font-style: normal;
             font-weight: 400;
             font-size: 40px;
@@ -41,9 +43,10 @@
             width: 104px;
             height: 56px;
             left: 240px;
-            top: 0px;
+            top: 10px;
+            margin-left: 10px;
 
-            font-family: 'Kantumruy', serif;
+            font-family: 'Kantumruy', sans-serif;
             font-style: normal;
             font-weight: 400;
             font-size: 40px;

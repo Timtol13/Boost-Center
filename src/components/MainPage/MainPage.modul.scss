@@ -1,16 +1,135 @@
 .MainPage{
     width: 100%;
     height: 100vh;
-    margin-top: 100px;
     .firstImage{
-        position: absolute;
         width: 100%;
-        height: 100vh;
+        left: 0%;
+        right: -0.36%;
+        top: 0%;
+        bottom: 78.03%;
         mix-blend-mode: luminosity;
         opacity: 0.04;
     }
-    .fbi{
-        position: absolute;
+    .mainPageContent{
+        display: flex;
+        .text{
+            position: absolute;
+            top: 20%;
+            left: 20%;
+            width: 30%;
+            h1, h2{
+                font-family: 'Play', sans-serif;
+                font-style: normal;
+                font-weight: 700;
+                font-size: 36px;
+                line-height: 15px;
+
+                color: #71F4DA;
+                text-shadow:0 0 40px #71F4DA44;
+            }
+            h2{
+                font-size: 28px;
+            }
+            p{
+                font-family: 'Fahkwang', sans-serif;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 29px;
+
+                color: rgba(255, 255, 255, 0.65);
+            }
+            .more{
+                cursor: pointer;
+                font-family: 'Fahkwang', sans-serif;
+                font-style: normal;
+                font-weight: 700;
+                font-size: 15px;
+                line-height: 22px;
+                color: #FFFFFF;
+                width: 200px;
+                padding: 10px;
+                background: rgba(46, 236, 197, 0.1);
+                border: 1.5px solid #2EECC5;
+                box-shadow: 0px 0px 38px rgba(46, 236, 197, 0.2);
+                border-radius: 41px;
+                img{
+                    filter: brightness(0) invert(1);
+                    transform: rotate(180deg);
+                    margin-bottom: -2px;
+                }
+            }
+            .FAQ{
+                cursor: pointer;
+                font-family: 'Fahkwang', sans-serif;
+                font-style: normal;
+                margin-left: 10px;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 25px;
+                color: rgba(255, 255, 255, 0.4);
+            }
+        }
+
+
+        .agent{
+            position: absolute;
+            height: 90%;
+            bottom: 0;
+            right: 0;
+            .rings{
+                position: absolute;
+                width: 70%;
+                height: 100%;
+                z-index: 1;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                right: 10%;
+                bottom: -10%;
+                .brightness{
+                    width: 150px;
+                    height: 150px;
+                    box-shadow:0 0 600px #666;
+                }
+                .ring{
+                    border-radius: 50%;
+                }
+                .ring1{
+                    box-sizing: border-box;
+
+                    position: absolute;
+                    width: 66.5%;
+                    height: 66.5%;
+
+                    border: 2px solid rgba(46, 236, 197, 0.6);
+                }
+                .ring2{
+                    box-sizing: border-box;
+
+                    position: absolute;
+                    width: 83.4%;
+                    height: 83.4%;
+
+                    border: 2px solid rgba(46, 236, 197, 0.2);
+                }
+                .ring3{
+                    box-sizing: border-box;
+
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+
+                    border: 2px solid rgba(46, 236, 197, 0.09);
+                }
+            }
+            img{
+                position: relative;
+                z-index: 2;
+                height: 100%;
+                width: 100%;
+            }
+        }
     }
     .endPage{
         position: absolute;

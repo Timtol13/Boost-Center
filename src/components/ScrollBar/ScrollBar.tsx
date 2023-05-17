@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useState } from 'react';
 import './ScrollBar.modul.scss';
 
 interface BoxProps {
@@ -6,7 +6,7 @@ interface BoxProps {
 }
 
 const Box: React.FC<BoxProps> = ({ index }) => {
-  const [marginTop, setMarginTop] = useState(0);
+  const [marginTop, setMarginTop] = useState(400);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -14,21 +14,21 @@ const Box: React.FC<BoxProps> = ({ index }) => {
       const windowHeight = window.innerHeight;
       const boxHeight = 400;
       const offset = (0 + index) * boxHeight;
-      const newMarginTop = Math.max(0, position - offset);
+      const newMarginTop = index === 1 ? position - offset : Math.max(0, position - offset);
       setMarginTop(newMarginTop);
-        const activeIndex = Math.floor((window.scrollY / 4824) * 10);
-        const elements = [1, 2, 3, 4, 5];
+      const activeIndex = Math.floor((position / (5 * windowHeight)) * 5) + 1;
+      const elements = [1, 2, 3, 4, 5];
 
-        elements.forEach((index) => {
-            const el = document.getElementById(index.toString());
-            if (el) {
-                if (index === activeIndex) {
-                    el.classList.add('active');
-                } else {
-                    el.classList.remove('active');
-                }
-            }
-        });
+      elements.forEach((index) => {
+        const el = document.getElementById(`element${index.toString()}`);
+        if (el) {
+          if (index === activeIndex) {
+            el.classList.add('active');
+          } else {
+            el.classList.remove('active');
+          }
+        }
+      });
     };
 
     handleScroll();
@@ -42,7 +42,7 @@ const Box: React.FC<BoxProps> = ({ index }) => {
     <a
       className={`element`}
       style={{ marginTop: `${marginTop}px` }}
-      id={`${index}`}
+      id={`element${index}`}
       href={'#MainPage'}
     >
       <h4>0{index}</h4>
@@ -51,7 +51,7 @@ const Box: React.FC<BoxProps> = ({ index }) => {
 };
 
 export const ScrollBar: React.FC = () => {
-  const [activeIndex, setActiveIndex] = useState(0);
+  const [activeIndex, setActiveIndex] = useState(1);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -68,6 +68,7 @@ export const ScrollBar: React.FC = () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
+
 
   return (
     <div className="scrollbar">
